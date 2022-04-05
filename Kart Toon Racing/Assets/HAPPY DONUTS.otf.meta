@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: cdfb354261fce3342b71f65abf42b0f7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HAPPY DONUTS
+  fontNames:
+  - HAPPY DONUTS
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3b0035711360a5642bf3fed29392bcc6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

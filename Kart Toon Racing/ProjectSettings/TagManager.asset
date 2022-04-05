@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Walls
+  - KartCameraPoint
+  - TextJuara3
+  - TextJuara1
+  - Star2
+  - TextJuara4
+  - Star3
+  - StarDummy
+  - Star1
+  - FinishCanvas
+  - TextJuara2
+  - FinishCamera
+  - FinishLine
+  - StartLine
+  - Garis2
+  - Line
+  - Garis1
+  - Enemy
+  - Arrow1
+  - Arrow2
+  - Arrow3
+  - Arrow4
+  - Pos1
+  - Pos2
+  - Obstacle
+  - Wall
+  - PlayerTrigger
+  - Spawner
+  - DeleteLine
+  - music
+  - CP
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Karts
+  - Player1
+  - Player2
+  - Player3
+  - Player4
+  - Items
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

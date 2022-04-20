@@ -18,6 +18,8 @@ namespace PowerslideKartPhysics
         public GameObject[] characterPrefabs;
 	    //public Transform spawnPoint;
 
+        public bool MultiplayerScene;
+
         private void Awake()
         {
             // Hide UI when showing the menu
@@ -100,35 +102,40 @@ namespace PowerslideKartPhysics
         }
 
         void Start(){
-            Kart newKart = null;
-            if (kart != null)
-            {
-                int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
-                GameObject kart = characterPrefabs[selectedCharacter];
-                //GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-                newKart = Instantiate(kart, spawnPoint, Quaternion.LookRotation(spawnDir.normalized, Vector3.up)).GetComponent<Kart>();
-            }
-
-            if (uiContainer != null)
-            {
-                UIControl uiController = uiContainer.GetComponent<UIControl>();
-                if (uiController != null)
+            if (MultiplayerScene == false){
+                Kart newKart = null;
+                if (kart != null)
                 {
-                    uiController.Initialize(newKart);
+                    int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
+                    GameObject kart = characterPrefabs[selectedCharacter];
+                    //GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+                    newKart = Instantiate(kart, spawnPoint, Quaternion.LookRotation(spawnDir.normalized, Vector3.up)).GetComponent<Kart>();
                 }
 
-                uiContainer.SetActive(true);
+                if (uiContainer != null)
+                {
+                    UIControl uiController = uiContainer.GetComponent<UIControl>();
+                    if (uiController != null)
+                    {
+                        uiController.Initialize(newKart);
+                    }
+
+                    uiContainer.SetActive(true);
+                }
+
+                // Connect the camera to the spawned kart
+                if (kartCam != null)
+                {
+                    kartCam.Initialize(newKart);
+                }
+
+                //gameObject.SetActive(false);
+
+                //StartCoroutine(SpawnTime());
             }
-
-            // Connect the camera to the spawned kart
-            if (kartCam != null)
-            {
-                kartCam.Initialize(newKart);
+            if (MultiplayerScene == true){
+                Debug.Log("Multiplayer Scene");
             }
-
-            //gameObject.SetActive(false);
-
-            //StartCoroutine(SpawnTime());
         }
 
         void Update(){

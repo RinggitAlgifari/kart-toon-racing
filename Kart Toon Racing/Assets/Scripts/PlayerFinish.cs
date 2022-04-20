@@ -34,14 +34,21 @@ public class PlayerFinish : MonoBehaviour
         }*/
 
         if ((PlayerName == PlayerName)/* || (PlayerName == "Player 2" ) || (PlayerName == "Player 3" ) || (PlayerName == "Player 4" )*/){
-            TextLastCoin = GameObject.Find("TextLastCoinPlayer").GetComponent<Text>();
-            TextLastXP = GameObject.Find("TextLastXPPlayer").GetComponent<Text>();
+            //TextLastCoin = GameObject.Find("TextLastCoinPlayer").GetComponent<Text>();
+            //TextLastXP = GameObject.Find("TextLastXPPlayer").GetComponent<Text>();
             if (isPlayer == true){
                 Bintang1 = GameObject.FindGameObjectWithTag("Star1");
                 Bintang2 = GameObject.FindGameObjectWithTag("Star2");
                 Bintang3 = GameObject.FindGameObjectWithTag("Star3");
 
                 BintangDummy = GameObject.FindGameObjectWithTag("StarDummy");
+
+                TextLastCoin = GameObject.Find("TextLastCoinPlayer").GetComponent<Text>();
+                TextLastXP = GameObject.Find("TextLastXPPlayer").GetComponent<Text>();
+            }
+            if (isPlayer == false){
+                TextLastCoin = GameObject.Find("TextScoreDummy").GetComponent<Text>();
+                TextLastXP = GameObject.Find("TextXPDummy").GetComponent<Text>();
             }
             
         }
